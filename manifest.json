@@ -1,0 +1,28 @@
+{
+  "name": "Update Branch Remover",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "description": "Remove Update Branch Button in Github",
+  "homepage_url": "http://mohamad.blog",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "contentSettings",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://github.com/*"
+],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.github.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
